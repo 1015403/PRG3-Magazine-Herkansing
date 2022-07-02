@@ -9,6 +9,12 @@ body {
     font-family: "Britannic Bold";
 }
 
+.p {
+    color: black;
+    font-size: 10px;
+    font-family: Calibri;
+    text-align: center;
+}
 
 /* Flexbox aanmaken inclusief items*/
 .flex-container {
@@ -16,12 +22,15 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     background-color: #ffffff;
+    height: 500px;
+    justify-content: center;
 }
 
 .flex-container > div1 {
     background-color: #7accd9;
     color: #000000;
     width: 220px;
+    height: 200px;
     margin: 10px;
     font-size: 30px;
     text-align: center;
@@ -36,4 +45,23 @@ body {
     font-size: 30px;
     text-align: center;
     line-height: 200px;
+}
+
+/*button style*/
+.button {
+    background-color: white;
+    border: #d53f02;
+    color: black;
+    padding: 12px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.button:hover {
+    background-color: #d53f02;
+    color: black;
 }
