@@ -13,6 +13,11 @@ body {
     color: black;
     font-size: 10px;
     font-family: Calibri;
+}
+
+h2 {
+    color: black;
+    font-size: 18px;
     text-align: center;
 }
 
@@ -22,19 +27,16 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     background-color: #ffffff;
-    height: 500px;
-    justify-content: center;
 }
 
 .flex-container > div1 {
     background-color: #7accd9;
     color: #000000;
     width: 220px;
-    height: 200px;
     margin: 10px;
     font-size: 30px;
     text-align: center;
-    line-height: 200px;
+    margin-bottom: 10px;
 }
 
 .flex-container > div2 {
@@ -61,7 +63,31 @@ body {
     margin-top: 4px;
 }
 
-.button:hover {
+.button1 {
+    background-color: white;
+    color: black;
+    border: #d53f02;
+    padding: 15px;
+}
+
+.button1:hover {
     background-color: #d53f02;
     color: black;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: #d53f02;
+    padding: 15px;
+}
+
+.fa {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fa:hover {
+    color: #d53f02;
 }
