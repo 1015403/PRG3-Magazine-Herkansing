@@ -21,33 +21,6 @@ h2 {
     text-align: center;
 }
 
-/* Flexbox aanmaken inclusief items*/
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: #ffffff;
-}
-
-.flex-container > div1 {
-    background-color: #7accd9;
-    color: #000000;
-    width: 220px;
-    margin: 10px;
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.flex-container > div2 {
-    background-color: #d53f02;
-    color: #000000;
-    width: 260px;
-    margin: 10px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 200px;
-}
 
 /*button style*/
 .button {
@@ -75,19 +48,37 @@ h2 {
     color: black;
 }
 
-.button2 {
-    background-color: white;
-    color: black;
-    border: #d53f02;
-    padding: 15px;
-}
-
-.fa {
-    font-size: 50px;
+.addToFavBtn {
+    display: inline-block;
+    position: relative;
+    font-size: 60px;
     cursor: pointer;
-    user-select: none;
+    padding: 20px 20px;
 }
 
-.fa:hover {
-    color: #d53f02;
+.addToFavBtn:hover {
+    background-color: #ff0000;
+}
+
+.addToFavBtn::before {
+    font-size: 50px;
+    color: #000;
+    content: "♥";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.addToFavBtn::after {
+    font-size: 50px;
+    color: #ff3252;
+    content: "♥";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s;
+}
+.addToFavBtn.liked::after {
+    transform: translate(-50%, -50%) scale(1.1);
 }
