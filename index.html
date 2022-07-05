@@ -4,8 +4,8 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ford magazine</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="js/main.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
@@ -19,27 +19,22 @@
     <div1 class="flex-item-1" id="1">
         <p>Mustang GT500</p>
         <img src="images/GT500.jpg" height="150px" width="200px">
-        <button class="button button1" onclick=toggleText()>Informatie</button>
-        <button class="button button2">
-            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
-        </button>
+        <button class="button button1" id="infoBtn">Informatie</button>
+        <button class="addToFavBtn"></button>
     </div1>
 
     <div1 class="flex-item-2" id="2">
         <p>Mustang GT350</p>
         <img src="images/GT350.jpg" height="150px" width="200px">
-        <button class="button button1" onclick=toggleText()>Informatie</button>
-        <button class="button button2">
-            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
-        </button>
+        <button class="button button1">Informatie</button>
+        <button id="like"></button>
     </div1>
 
     <div1 class="flex-item-3" id="3">
         <p>Mustang GT</p>
         <img src="images/mustangGT.jpg" height="150px" width="200px">
         <button class="button button1" onclick=toggleText()>Informatie</button>
-        <button class="button button2">
-            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        <button id="like">
         </button>
     </div1>
 
@@ -47,8 +42,7 @@
         <p>Mustang Mach-1</p>
         <img src="images/mach1.jpg" height="150px" width="200px">
         <button class="button button1" onclick=toggleText()>Informatie</button>
-        <button class="button button2">
-            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        <button id="like">
         </button>
     </div1>
 
@@ -56,8 +50,7 @@
         <p>Mustang Mach-E</p>
         <img src="images/machE.jpg" height="150px" width="200px">
         <button class="button button1" onclick=toggleText()>Informatie</button>
-        <button class="button button2">
-            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        <button id="like">
         </button>
     </div1>
 
@@ -65,8 +58,7 @@
         <p>Ford GT</p>
         <img src="images/FordGT.jpg" height="150px" width="200px">
         <button class="button button1" onclick=toggleText()>Informatie</button>
-        <button class="button button2">
-            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        <button id="like">
         </button>
     </div1>
 
@@ -74,8 +66,7 @@
         <p>Fiësta</p>
         <img src="images/fordFiesta.jpg" height="150px" width="200px">
         <button class="button button1" onclick=toggleText()>Informatie</button>
-        <button class="button button2">
-            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        <button id="like">
         </button>
     </div1>
 
@@ -83,8 +74,7 @@
         <p>Focus</p>
         <img src="images/Focus.jpg" height="150px" width="200px">
         <button class="button button1" onclick=toggleText()>Informatie</button>
-        <button class="button button2">
-            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        <button id="like">
         </button>
     </div1>
 
@@ -92,8 +82,7 @@
         <p>Kuga</p>
         <img src="images/kuga.jpg" height="150px" width="200px">
         <button class="button button1" onclick=toggleText()>Informatie</button>
-        <button class="button button2">
-            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        <button id="like">
         </button>
     </div1>
 
@@ -101,8 +90,7 @@
         <p>Puma</p>
         <img src="images/fordPuma.jpg" height="150px" width="200px">
         <button class="button button1" onclick=toggleText()>Informatie</button>
-        <button class="button button2">
-            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        <button id="like">
         </button>
     </div1>
 
