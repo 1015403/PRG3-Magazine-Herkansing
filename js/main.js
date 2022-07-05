@@ -27,11 +27,19 @@ function init(){
     }
 }
 
-//Local Storage
-function addToLocalStorage(key, value) {
-    window.localStorage.setItem(key, JSON.stringify(value));
+//get local storage fav cars
+function getFavCars(){
+    //get cars from local storage
+    let storedString = localStorage.getItem('myFavoriteCars');
+    //if storedString not empty
+    if(storedString){
+        //parse storedString
+        let storedData = JSON.parse(storedString);
+        for(let name of storedData) {
+            //push cars to favCars array
+            favCars.push(name);
+        }
+    }
 }
 
-function getFromLocalStorage(key) {
-    return JSON.parse(window.localStorage.getItem(key));
-}
+
