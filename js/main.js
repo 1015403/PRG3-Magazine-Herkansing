@@ -7,6 +7,89 @@ let favButton;
 let favCars = [];
 let apiUrl = 'http://localhost/magazine/webservice/'
 
+let carsDetails = [
+    {
+        name: "Ford Mustang Shelby GT500",
+        image: "./images/GT500.jpg",
+        information: "De Ford Mustang Shelby GT500 zit binnen 3.3 seconden op de 100 kph",
+        top_speed: "290 kph",
+        engine: "5.2L Supercharged V8",
+        tags: ['760HP', '7-speed Tremec dual-clutch transmission']
+    },
+    {
+        name: "Ford Mustang GT350",
+        image: "./images/GT350.jpg",
+        information: "Helaas wordt de GT350 niet meer gemaakt...",
+        top_speed: "276 kph",
+        engine: "5.2L V8",
+        tags: ['526HP', '6-speed Tremec clutch transmission', '8250rpm']
+    },
+    {
+        name: "Ford Mustang GT",
+        image: "./images/mustangGT.jpg",
+        information: "Goedkope broertje van de andere Mustangs",
+        top_speed: "250 kph",
+        engine: "5.0L V8",
+        tags: ['449HP', '6-speed Tremec clutch transmission']
+    },
+    {
+        name: "Ford Mustang Mach-1",
+        image: "./images/mach1.jpg",
+        information: "Nieuwste versie van de Mustang serie",
+        top_speed: "249 kph",
+        engine: "5.0L V8 A10",
+        tags: ['460HP', '6-speed Tremec clutch transmission']
+    },
+    {
+        name: "Ford Mustang Mach-E",
+        image: "./images/machE.jpg",
+        information: "De eerste elektrische wagen van Ford is toevallig ook een Mustang",
+        top_speed: "184 kph",
+        engine: "Elektrisch 115kW",
+        tags: ['269HP']
+    },
+    {
+        name: "Ford GT",
+        image: "./images/FordGT.jpg",
+        information: "De Ford GT is een middenmotor superauto. Het ontwerp is gebaseerd op de Ford GT40",
+        top_speed: "330 kph",
+        engine: "5.4L V8",
+        tags: ['550HP', '7-speed dual-clutch transmission paddles']
+    },
+    {
+        name: "Ford Fiësta",
+        image: "./images/fordFiesta.jpg",
+        information: "Het meest verkochte type Ford auto samen met de Focus",
+        top_speed: "230 kph",
+        engine: "1.0L ECOBOOST",
+        tags: ['200HP']
+    },
+    {
+        name: "Ford Focus",
+        image: "./images/Focus.jpg",
+        information: "Het meest verkochte type Ford auto samen met de Fiësta",
+        top_speed: "250 kph",
+        engine: "1.5L ECOBOOST",
+        tags: ['279HP']
+    },
+    {
+        name: "Ford Kuga",
+        image: "./images/kuga.jpg",
+        information: "Mooie en compacte SUV",
+        top_speed: "200 kph",
+        engine: "1.5L ECOBOOST",
+        tags: ['151HP']
+    },
+    {
+        name: "Ford Puma",
+        image: "./images/fordPuma.jpg",
+        information: "De Puma heeft een geavanceerde Hybride aandrijving",
+        top_speed: "220 kph",
+        engine: "1.0L ECOBOOST",
+        tags: ['200HP']
+    }
+];
+
 //Init
 function init(){
     allCars = document.getElementById("listCars");
