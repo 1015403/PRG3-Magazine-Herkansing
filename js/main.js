@@ -1,48 +1,31 @@
 window.addEventListener('load', init);
-window.addEventListener('load', checkLike);
 
 //globals
+let allCars;
+let detailButton;
+let favButton;
+let favCars = [];
 let apiUrl = 'http://localhost/magazine/webservice/'
-let cars
 
 //Init
-function init() {
-    getCars();
+function init(){
+    allCars = document.getElementById("listCars");
 
-    if (typeof window.localStorage === "undefined") {
-        console.error('Local storage is not available in your browser');
-        return;
+    getFavCars();
+    createCarCards();
+
+    //add click event to every favButton
+    favButton = document.getElementsByClassName("favBtn")
+    for (let i = 0; i < favButton.length; i++){
+        favButton[i].addEventListener("click", function(e){addOrRemoveFav(i)});
     }
 
-    if (window.localStorage.getItem("favorites") === null) {
-        addToLocalStorage("favorites", []);
+    //add click event to every detailButton
+    detailButton = document.getElementsByClassName("detailsBtn")
+    for(let i = 0; i < detailButton.length; i++){
+        detailButton[i].addEventListener("click", function (e){showDetails(i)});
     }
-
-    console.log(getFromLocalStorage("favorites"));
 }
-
-document.getElementById("infoBtn").addEventListener("click", infoBtnFunction);
-
-function infoBtnFunction() {
-    document.getElementById("infoBtn").innerHTML = "YOU CLICKED ME!";
-}
-
-$('.addToFavBtn').on('click', event => {
-    var storeName = $(event.target).parents()[1].firstElementChild.innerHTML;
-
-    var favorites = JSON.parse(localStorage.getItem("favorites"));
-    if (!favorites){
-        localStorage.setItem("favorites", JSON.stringify({stores:[]}));
-        favorites = JSON.parse(localStorage.getItem("favorites"));
-    }else{
-        favorites = JSON.parse(favorites);
-    }
-
-    favorites.stores.push(storeName);
-
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-}
-);
 
 //Local Storage
 function addToLocalStorage(key, value) {
