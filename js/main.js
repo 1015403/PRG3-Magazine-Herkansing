@@ -194,3 +194,28 @@ function createCarCards(){
         car.appendChild(detailButton);
     }
 }
+
+//(detailButton onclick)
+function showDetails(cars){
+    console.log("I pressed car number " + cars);
+
+    //name of car
+    let nameCar = document.getElementById("nameCar");
+    nameCar.innerHTML = carsDetails[cars].name;
+
+    //information of car
+    let information = document.getElementById("information");
+    information.innerHTML = carsDetails[cars].information;
+
+    //top speed of car
+    let top_speed = document.getElementById("top_speed");
+    top_speed.innerHTML = carsDetails[cars].top_speed;
+
+    //engine type of car
+    let engine = document.getElementById("engine");
+    engine.innerHTML = carsDetails[cars].engine;
+
+    //tags of car
+    let tags = document.getElementById("tags");
+    tags.innerHTML = carsDetails[cars].tags;
+}
