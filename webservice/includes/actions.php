@@ -9,51 +9,61 @@ function getCars()
             "id" => 1,
             "name" => "Mustang Shelby GT500",
             "type" => "Sport",
+            "image" => "./images/GT500.jpg",
         ],
         [
             "id" => 2,
             "name" => "Mustang GT350",
             "type" => "Sport",
+            "image" => "./images/GT350.jpg",
         ],
         [
             "id" => 3,
             "name" => "Mustang GT",
             "type" => "Sport",
+            "image" => "./images/mustangGT.jpg",
         ],
         [
             "id" => 4,
             "name" => "Mustang Mach-1",
             "type" => "Sport",
+            "image" => "./images/mach1.jpg",
         ],
         [
             "id" => 5,
             "name" => "Mustang Mach-E",
             "type" => "Elektrisch",
+            "image" => "./images/machE.jpg",
         ],
         [
             "id" => 6,
             "name" => "GT",
             "type" => "Sport",
+            "image" => "./images/FordGT.jpg",
         ],
         [
             "id" => 7,
             "name" => "Fiësta",
             "type" => "Hatchback",
+            "image" => "./images/fordFiesta.jpg",
         ],
         [
             "id" => 8,
             "name" => "Focus",
             "type" => "Station",
+            "image" => "./images/Focus.jpg",
         ],
         [
             "id" => 9,
             "name" => "Kuga",
             "type" => "SUV",
+            "image" => "./images/kuga.jpg",
         ],
         [
             "id" => 10,
             "name" => "Puma",
             "type" => "SUV",
+
         ],
     ];
 }
@@ -102,28 +112,28 @@ function getCarsDetails($id)
             "tags" => ['550HP', '7-speed dual-clutch transmission paddles']
         ],
         7 => [
-            "information" => "Specialty when on holiday in Spain",
-            "top_speed" => "",
-            "engine" => "",
-            "tags" => ['fish']
+            "information" => "Het meest verkochte type Ford auto samen met de Focus",
+            "top_speed" => "230 kph",
+            "engine" => "1.0L ECOBOOST",
+            "tags" => ['200HP']
         ],
         8 => [
-            "information" => "Specialty when on holiday in Spain",
-            "top_speed" => "",
-            "engine" => "",
-            "tags" => ['fish']
+            "information" => "Het meest verkochte type Ford auto samen met de Fiësta",
+            "top_speed" => "250 kph",
+            "engine" => "1.5L ECOBOOST",
+            "tags" => ['279HP']
         ],
         9 => [
-            "information" => "Specialty when on holiday in Spain",
-            "top_speed" => "",
-            "engine" => "",
-            "tags" => ['fish']
+            "information" => "Mooie en compacte SUV",
+            "top_speed" => "200 kph",
+            "engine" => "1.5L ECOBOOST",
+            "tags" => ['151HP']
         ],
         10 => [
-            "information" => "Specialty when on holiday in Spain",
-            "top_speed" => "",
-            "engine" => "",
-            "tags" => ['fish']
+            "information" => "De Puma heeft een geavanceerde Hybride aandrijving",
+            "top_speed" => "220 kph",
+            "engine" => "1.0L ECOBOOST",
+            "tags" => ['200HP']
         ],
     ];
 
