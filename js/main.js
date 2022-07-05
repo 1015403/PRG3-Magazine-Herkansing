@@ -61,3 +61,53 @@ function addOrRemoveFav(carsID){
     //force reload of page
     location.reload()
 }
+
+//create car cards
+function createCarCards(){
+    for (let cars of carsDetails){
+        //create carCard
+        let car = document.createElement('div');
+        car.classList.add('carCard');
+
+        //create name tags
+        let name = document.createElement('h2');
+        name.innerText = cars.name;
+
+        //create image
+        let image = document.createElement('img');
+        image.src = cars.image;
+
+        //create favBtn
+        let favButton = document.createElement('p');
+        favButton.classList.add('favBtn');
+
+        //checks if car is in favCars array
+        let isFavorite = favCars.includes(cars.name);
+
+        //if the car is favCars array
+        if (isFavorite){
+            //add fav class
+            car.classList.add('fav')
+            //buttons text: remove from favorites
+            favButton.innerText = "Remove from favorites"
+            favButton.classList.add('favorited')
+            //else (if not in favCars array)
+        } else {
+            //button text: add to favorites
+            favButton.innerText = "Add to favorites"
+            favButton.classList.remove('favorited')
+        }
+
+        //create detailsBtn
+        let detailButton = document.createElement('p');
+        detailButton.classList.add('detailsBtn');
+        detailButton.innerText = "Show information"
+
+        //append all divs to parent div
+        allCars.appendChild(car)
+        car.appendChild(name);
+        car.appendChild(image);
+        car.appendChild(favButton);
+        car.appendChild(detailButton);
+    }
+}
