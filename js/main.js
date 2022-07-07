@@ -1,11 +1,9 @@
 window.addEventListener('load', init);
 
-//globals
 let allCars;
 let detailButton;
 let favButton;
 let favCars = [];
-let apiUrl = 'http://localhost/magazine/webservice/'
 
 let carsDetails = [
     {
@@ -90,7 +88,6 @@ let carsDetails = [
     }
 ];
 
-//Init
 function init(){
     allCars = document.getElementById("listCars");
 
@@ -99,8 +96,10 @@ function init(){
 
     //add click event to every favButton
     favButton = document.getElementsByClassName("favBtn")
-    for (let i = 0; i < favButton.length; i++){
-        favButton[i].addEventListener("click", function(e){addOrRemoveFav(i)});
+    for (let i = 0; i < favButton.length; i++) {
+        favButton[i].addEventListener("click", function (e) {
+            addOrRemoveFav(i)
+        });
     }
 
     //add click event to every detailButton
@@ -219,3 +218,4 @@ function showDetails(cars){
     let tags = document.getElementById("tags");
     tags.innerHTML = carsDetails[cars].tags;
 }
+
